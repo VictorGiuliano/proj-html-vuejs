@@ -1,3 +1,6 @@
+ @use '/src/assets/scss/partials/variables' as *;
+ @use '/src/assets/scss/partials/mixins' as *;
+
  * {
      padding: 0;
      margin: 0;
@@ -6,4 +9,9 @@
 
  body {
      font-family: "Roboto Condensed", sans-serif;
+ }
+
+ .container {
+     margin: 0 auto;
+     max-width: 800px;
  }

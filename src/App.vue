@@ -1,11 +1,13 @@
 <script>
+import AppHeader from './components/AppHeader.vue';
 export default {
-  name: 'Takeout'
+  name: 'Takeout',
+  components: { AppHeader }
 }
 </script>
 
 <template>
-
+  <AppHeader />
 </template>
 
 <style lang="scss">
