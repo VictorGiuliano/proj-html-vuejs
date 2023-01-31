@@ -37,7 +37,8 @@ section {
     background-image: url('../assets/img/home-background-hero-scaled.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 45.6rem;
+
 
     .text-area {
         padding-top: 8rem;
@@ -52,10 +53,6 @@ section {
     p {
         color: $white;
         font-size: 2.5rem;
-    }
-
-    div {
-        margin-top: 2rem;
     }
 }
 </style>
