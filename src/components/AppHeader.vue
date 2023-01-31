@@ -19,11 +19,11 @@ export default {
         <div class="container">
             <navbar :info="informations"></navbar>
             <div class="text-area">
-                <p>Hungry?</p>
+                <h2>Hungry?</h2>
                 <h1>Great Food</h1>
-                <h1><span>Delivered</span></h1>
+                <h1 class="yellow">Delivered</h1>
             </div>
-            <div>
+            <div id="cont-button">
                 <generic-button @press-button="CreateMessage"></generic-button>
             </div>
 
@@ -49,10 +49,17 @@ section {
         font-size: 4rem;
     }
 
-    h2,
-    p {
+    .yellow {
+        color: $yellow;
+    }
+
+    h2 {
         color: $white;
         font-size: 2.5rem;
+    }
+
+    #cont-button {
+        padding-top: 2rem;
     }
 }
 </style>
