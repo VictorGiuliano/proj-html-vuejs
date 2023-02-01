@@ -1,6 +1,7 @@
 <script>
 import CardPrice from './utilities/CardPrice.vue'
 import GenericButton from './utilities/GenericButton.vue';
+import CardMenu from './utilities/CardMenu.vue';
 export default {
     name: 'AppMain',
     data() {
@@ -8,10 +9,11 @@ export default {
             foods: [{ image: 'src/assets/img/skin-on-fries.jpg', title: 'Skin On Fries', price: '$3.00', secondprice: '- $6.00' },
             { image: '/src/assets/img/choco-cookie-frappe.jpg', title: 'Choco Cookie Frappe', price: '$4.99' },
             { image: '/src/assets/img/donut-burger.jpg', title: 'The Donut Burger', price: '$6.99' }
-            ]
+            ],
+            menu: [{ image: 'src/assets/img/appetizers.jpg', title: 'APPETIZERS' }, { image: 'src/assets/img/burgers.jpg', title: 'BURGERS' }, { image: 'src/assets/img/pizza.jpg', title: 'PIZZA' }, { image: 'src/assets/img/fries.jpg', title: 'FRIES' }, { image: 'src/assets/img/sides.jpg', title: 'SIDES' }, { image: 'src/assets/img/desserts.jpg', title: 'DESSERTS' }, { image: 'src/assets/img/beverages.jpg', title: 'BEVERAGES' }, { image: 'src/assets/img/specials.jpg', title: 'SPECIALS' }]
         }
     },
-    components: { CardPrice, GenericButton }
+    components: { CardPrice, GenericButton, CardMenu }
 }
 </script>
 <template>
@@ -50,17 +52,20 @@ export default {
     </section>
     <section class="Menu">
         <div class="container">
-            <div clas="title">
-                <H3>Menu Categories</H3>
+            <div class="title">
+                <h2>Menu Categories</h2>
                 <GenericButton />
             </div>
-
+            <div class="Cards-menu">
+                <card-menu :menus="menu"></card-menu>
+            </div>
         </div>
     </section>
 
 </template>
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
+@use '../assets/scss/partials/mixins' as *;
 
 
 
@@ -77,7 +82,6 @@ export default {
     top: -20px;
     left: 0;
     background-color: $white;
-    width: 100%;
     padding: 2rem 1rem 0 1rem;
 
     header {
@@ -115,20 +119,32 @@ export default {
 
 .con-wave {
     position: relative;
+    width: 100%;
+    height: 200px;
 
     .wave {
-        filter: invert(100%) drop-shadow(300px 0 200px white);
-        transform: rotate(-3.21rad) scale(2);
-        height: 100px;
+        @include graphic;
         position: absolute;
+        top: 12rem;
+        left: 0;
+        width: 60%;
+        height: 71%;
     }
 }
-
-
-
 
 .bkg {
     max-height: auto;
     width: 100%;
+}
+
+// MENU
+.title {
+    @include flexbar;
+    padding: 5rem 0;
+
+    h2 {
+        padding-top: 2.8rem;
+        font-size: 1.7rem;
+    }
 }
 </style>

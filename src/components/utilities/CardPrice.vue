@@ -37,7 +37,7 @@ export default {
         }
 
         p {
-            padding-bottom: 2rem;
+            padding-bottom: 1rem;
             color: $red;
         }
     }

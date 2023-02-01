@@ -3,3 +3,26 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin graphic {
+    filter: invert(100%) drop-shadow(300px 0 200px white);
+
+    transform: rotate(2.89rad) scale(2.29);
+}
+
+@mixin overlay {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
