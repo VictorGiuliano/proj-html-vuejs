@@ -1,16 +1,17 @@
 <script>
 import CardPrice from './utilities/CardPrice.vue'
+import GenericButton from './utilities/GenericButton.vue';
 export default {
     name: 'AppMain',
     data() {
         return {
-            food: [{ image: '/src/assets/img/skin-on-fries.jpg', title: 'Skin On Fries', price: '$3.00', secondprice: '$6.00' },
+            foods: [{ image: 'src/assets/img/skin-on-fries.jpg', title: 'Skin On Fries', price: '$3.00', secondprice: '- $6.00' },
             { image: '/src/assets/img/choco-cookie-frappe.jpg', title: 'Choco Cookie Frappe', price: '$4.99' },
             { image: '/src/assets/img/donut-burger.jpg', title: 'The Donut Burger', price: '$6.99' }
             ]
         }
     },
-    components: { CardPrice }
+    components: { CardPrice, GenericButton }
 }
 </script>
 <template>
@@ -29,8 +30,11 @@ export default {
                     <div id="body-cartOne">
                         <h3>Our Most Popular Dishes</h3>
                     </div>
-                    <div>
-                        <card-price :food="food"></card-price>
+                    <div class="container-card">
+                        <card-price :foods="foods"></card-price>
+                    </div>
+                    <div class="container-button">
+                        <GenericButton />
                     </div>
                 </div>
             </div>
@@ -73,12 +77,19 @@ export default {
     #body-cartOne {
         text-align: center;
 
-        h3: {
-            margin: 4rem 0;
+        h3 {
+            font-size: 1.7rem;
         }
-
     }
 
+    .container-card {
+        margin-top: 3rem;
+    }
+
+    .container-button {
+        display: flex;
+        justify-content: center;
+    }
 
 }
 </style>
