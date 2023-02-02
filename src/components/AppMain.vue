@@ -16,7 +16,7 @@ export default {
 }
 </script>
 <template>
-    <section>
+    <section class="Dishes">
         <div id="Dishes">
             <div class="container">
                 <div class="container-cardOne">
@@ -70,7 +70,7 @@ export default {
             </div>
         </div>
     </section>
-    <section class="Latest News">
+    <section class="Latest-News">
         <div class="container">
             <div class="title">
                 <h2>Latest News</h2>
@@ -207,4 +207,7 @@ export default {
 }
 
 //LATEST NEWS
+.Latest-News {
+    padding-bottom: 6rem;
+}
 </style>
