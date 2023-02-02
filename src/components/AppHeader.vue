@@ -4,7 +4,7 @@ import GenericButton from './utilities/GenericButton.vue';
 export default {
     name: 'AppHeader',
     data() {
-        return { informations: [{ text: 'Home' }, { text: 'Order Online' }, { text: 'About' }, { text: 'News' }, { text: 'News' }, { text: 'Contact Us' }, { object: '<font-awesome-icon icon="fa-solid fa-cart-shopping />' }] }
+        return { informations: [{ text: 'Home' }, { text: 'Order Online' }, { text: 'About' }, { text: 'News' }, { text: 'News' }, { text: 'Contact Us' }, { object: '<font-awesome-icon icon="fa-solid fa-cart-shopping />' }], name: 'VIEW OUR MENU' };
     },
     components: { Navbar, GenericButton },
     methods: {
@@ -24,7 +24,7 @@ export default {
                 <h1 class="yellow">Delivered</h1>
             </div>
             <div id="cont-button">
-                <generic-button @press-button="CreateMessage"></generic-button>
+                <generic-button @press-button="CreateMessage" :name="name"></generic-button>
             </div>
 
         </div>

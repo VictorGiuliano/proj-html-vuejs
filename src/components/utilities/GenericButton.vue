@@ -2,6 +2,9 @@
 export default {
     name: 'Button',
     emits: ['press-button'],
+    props: {
+        name: String
+    },
     methods: {
         pressButton() {
             this.$emit('press-button')
@@ -11,7 +14,7 @@ export default {
 </script>
 <template>
     <form @submit.prevent=pressButton>
-        <button>WIEW OUR MENU</button>
+        <button>{{ name }}</button>
     </form>
 
 </template>

@@ -9,10 +9,18 @@ export default {
         return {
             foods: [{ image: 'src/assets/img/skin-on-fries.jpg', title: 'Skin On Fries', price: '$3.00', secondprice: '- $6.00' }, { image: '/src/assets/img/choco-cookie-frappe.jpg', title: 'Choco Cookie Frappe', price: '$4.99' }, { image: '/src/assets/img/donut-burger.jpg', title: 'The Donut Burger', price: '$6.99' }],
             menu: [{ image: 'src/assets/img/appetizers.jpg', title: 'APPETIZERS' }, { image: 'src/assets/img/burgers.jpg', title: 'BURGERS' }, { image: 'src/assets/img/pizza.jpg', title: 'PIZZA' }, { image: 'src/assets/img/fries.jpg', title: 'FRIES' }, { image: 'src/assets/img/sides.jpg', title: 'SIDES' }, { image: 'src/assets/img/desserts.jpg', title: 'DESSERTS' }, { image: 'src/assets/img/beverages.jpg', title: 'BEVERAGES' }, { image: 'src/assets/img/specials.jpg', title: 'SPECIALS' }],
-            newfood: [{ image: 'src/assets/img/pancake-burger.jpg', title: 'Pancake-burger', name: 'NEW: The Pancake Burger', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quam possimus voluptatum sunt commodi temporibus, numquam reiciendis repellendus ea qui?.' }, { image: 'src/assets/img/new-milkshake-menu.jpg', title: 'Milkshake-menu', name: 'New Milkshake Menu', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quam possimus voluptatum sunt commodi temporibus, numquam reiciendis repellendus ea qui?.' }]
+            newfood: [{ image: 'src/assets/img/pancake-burger.jpg', title: 'Pancake-burger', name: 'NEW: The Pancake Burger', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quam possimus voluptatum sunt commodi temporibus, numquam reiciendis repellendus ea qui?.' }, { image: 'src/assets/img/new-milkshake-menu.jpg', title: 'Milkshake-menu', name: 'New Milkshake Menu', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quam possimus voluptatum sunt commodi temporibus, numquam reiciendis repellendus ea qui?.' }],
+            name: 'START YOUR ORDER',
+            secondname: 'VIEW THE FULL MENU',
+            thirdname: 'READ MORE NEWS',
         }
     },
-    components: { CardPrice, GenericButton, CardMenu, CardNews }
+    components: { CardPrice, GenericButton, CardMenu, CardNews },
+    methods: {
+        CreateMessage() {
+            console.log('Hai cliccato un tasto')
+        }
+    }
 }
 </script>
 <template>
@@ -36,7 +44,7 @@ export default {
                             <card-price :foods="foods"></card-price>
                         </div>
                         <div class="container-button">
-                            <GenericButton />
+                            <generic-button @press-button="CreateMessage" :name="name"></generic-button>
                         </div>
                     </div>
                 </div>
@@ -53,7 +61,7 @@ export default {
         <div class="container">
             <div class="title">
                 <h2>Menu Categories</h2>
-                <GenericButton />
+                <generic-button @press-button="CreateMessage" :name="secondname"></generic-button>
             </div>
             <div class="Cards-menu">
                 <card-menu :menus="menu"></card-menu>
@@ -74,7 +82,7 @@ export default {
         <div class="container">
             <div class="title">
                 <h2>Latest News</h2>
-                <GenericButton />
+                <generic-button @press-button="CreateMessage" :name="thirdname"></generic-button>
             </div>
             <div class="News">
                 <card-news :news="newfood"></card-news>

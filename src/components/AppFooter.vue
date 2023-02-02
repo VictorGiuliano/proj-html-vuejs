@@ -10,7 +10,13 @@ export default {
             list2: [{ Title: 'NAVIGATE', text: 'Home', text1: 'Alternate Home', text2: 'Menu', text3: 'About', text4: 'News', text5: 'Contact Us', text6: 'Cart' }],
             list3: [{ Title: 'INFORMATION', text: 'My Account', text2: 'Terms Of Service', text3: 'Privacy Policy', image: 'src/assets/img/app-store-badge-200x67.png', image2: 'src/assets/img/play-store-badge-200x67.png' }],
             list4: [{ Title: 'OPENING HOURS', text: 'Mon', sign: '-', time: '10AM to 11PM', time2: '10AM to 1AM', time3: '11AM to 10PM', text2: 'Tue', text3: 'Wed', text4: 'Thur', text5: 'Fri', text6: 'Sat', text7: 'Sun' }],
-            list5: [{ Title: 'VOUCHER', sale: 'src/assets/img/footer-coupon.png', text2: 'Just Use The Code', text4: 'FIRSTORDER', text5: 'At Checkout' }]
+            list5: [{ Title: 'VOUCHER', sale: 'src/assets/img/footer-coupon.png', text2: 'Just Use The Code', text4: 'FIRSTORDER', text5: 'At Checkout' }],
+            name: 'SUBSCRIBE'
+        }
+    },
+    methods: {
+        CreateMessage() {
+            console.log('Hai cliccato un tasto')
         }
     }
 
@@ -37,7 +43,7 @@ export default {
             <div class="compilation">
                 <form>
                     <input type="text" placeholder="you@email.com">
-                    <GenericButton />
+                    <generic-button :name="name" @press-button="CreateMessage"></generic-button>
                 </form>
             </div>
         </div>
