@@ -72,7 +72,7 @@ export default {
     .contain-icon {
         display: flex;
         flex-direction: column;
-        padding-top: 2rem;
+        padding: 5rem 0;
 
         .svg-inline--fa {
             font-size: 3rem;

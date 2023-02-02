@@ -61,6 +61,24 @@ export default {
             </div>
         </div>
     </section>
+    <section class="banner">
+        <div class="container">
+            <p>Download Our</p>
+            <h1>Ordering App</h1>
+            <div class="social">
+                <img src="../assets/img/app-store-badge-200x67.png">
+                <img src="../assets/img/play-store-badge-200x67.png">
+            </div>
+        </div>
+    </section>
+    <section class="Latest News">
+        <div class="container">
+            <div class="title">
+                <h2>Menu Categories</h2>
+                <GenericButton />
+            </div>
+        </div>
+    </section>
 
 </template>
 <style lang="scss" scoped>
@@ -73,9 +91,7 @@ export default {
     padding: 0 1rem;
 }
 
-.container {
-    position: relative;
-}
+
 
 .container-cardOne {
     position: absolute;
@@ -138,6 +154,10 @@ export default {
 }
 
 // MENU
+.container {
+    position: relative;
+}
+
 .title {
     @include flexbar;
     padding: 5rem 0;
@@ -145,6 +165,41 @@ export default {
     h2 {
         padding-top: 2.8rem;
         font-size: 1.7rem;
+
+    }
+}
+
+.banner {
+    padding-top: 4.5rem;
+    background-image: url('../assets/img/app-ordering-scaled.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 28rem;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {
+        color: $white;
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        color: $yellow;
+    }
+
+    .social {
+        padding-top: 2rem;
+        display: flex;
+        gap: 1rem;
+
+        img {
+            height: auto;
+            max-width: 15%;
+        }
     }
 }
 </style>
