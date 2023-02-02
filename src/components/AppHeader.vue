@@ -2,7 +2,7 @@
 import Navbar from './utilities/Navbar.vue'
 import GenericButton from './utilities/GenericButton.vue';
 export default {
-    name: 'AppMain',
+    name: 'AppHeader',
     data() {
         return { informations: [{ text: 'Home' }, { text: 'Order Online' }, { text: 'About' }, { text: 'News' }, { text: 'News' }, { text: 'Contact Us' }, { object: '<font-awesome-icon icon="fa-solid fa-cart-shopping />' }] }
     },

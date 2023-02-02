@@ -2,18 +2,17 @@
 import CardPrice from './utilities/CardPrice.vue'
 import GenericButton from './utilities/GenericButton.vue';
 import CardMenu from './utilities/CardMenu.vue';
+import CardNews from './utilities/CardNews.vue';
 export default {
     name: 'AppMain',
     data() {
         return {
-            foods: [{ image: 'src/assets/img/skin-on-fries.jpg', title: 'Skin On Fries', price: '$3.00', secondprice: '- $6.00' },
-            { image: '/src/assets/img/choco-cookie-frappe.jpg', title: 'Choco Cookie Frappe', price: '$4.99' },
-            { image: '/src/assets/img/donut-burger.jpg', title: 'The Donut Burger', price: '$6.99' }
-            ],
-            menu: [{ image: 'src/assets/img/appetizers.jpg', title: 'APPETIZERS' }, { image: 'src/assets/img/burgers.jpg', title: 'BURGERS' }, { image: 'src/assets/img/pizza.jpg', title: 'PIZZA' }, { image: 'src/assets/img/fries.jpg', title: 'FRIES' }, { image: 'src/assets/img/sides.jpg', title: 'SIDES' }, { image: 'src/assets/img/desserts.jpg', title: 'DESSERTS' }, { image: 'src/assets/img/beverages.jpg', title: 'BEVERAGES' }, { image: 'src/assets/img/specials.jpg', title: 'SPECIALS' }]
+            foods: [{ image: 'src/assets/img/skin-on-fries.jpg', title: 'Skin On Fries', price: '$3.00', secondprice: '- $6.00' }, { image: '/src/assets/img/choco-cookie-frappe.jpg', title: 'Choco Cookie Frappe', price: '$4.99' }, { image: '/src/assets/img/donut-burger.jpg', title: 'The Donut Burger', price: '$6.99' }],
+            menu: [{ image: 'src/assets/img/appetizers.jpg', title: 'APPETIZERS' }, { image: 'src/assets/img/burgers.jpg', title: 'BURGERS' }, { image: 'src/assets/img/pizza.jpg', title: 'PIZZA' }, { image: 'src/assets/img/fries.jpg', title: 'FRIES' }, { image: 'src/assets/img/sides.jpg', title: 'SIDES' }, { image: 'src/assets/img/desserts.jpg', title: 'DESSERTS' }, { image: 'src/assets/img/beverages.jpg', title: 'BEVERAGES' }, { image: 'src/assets/img/specials.jpg', title: 'SPECIALS' }],
+            newfood: [{ image: 'src/assets/img/pancake-burger.jpg', title: 'Pancake-burger', name: 'NEW: The Pancake Burger', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quam possimus voluptatum sunt commodi temporibus, numquam reiciendis repellendus ea qui?.' }, { image: 'src/assets/img/new-milkshake-menu.jpg', title: 'Milkshake-menu', name: 'New Milkshake Menu', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quam possimus voluptatum sunt commodi temporibus, numquam reiciendis repellendus ea qui?.' }]
         }
     },
-    components: { CardPrice, GenericButton, CardMenu }
+    components: { CardPrice, GenericButton, CardMenu, CardNews }
 }
 </script>
 <template>
@@ -74,8 +73,11 @@ export default {
     <section class="Latest News">
         <div class="container">
             <div class="title">
-                <h2>Menu Categories</h2>
+                <h2>Latest News</h2>
                 <GenericButton />
+            </div>
+            <div class="News">
+                <card-news :news="newfood"></card-news>
             </div>
         </div>
     </section>
@@ -169,6 +171,7 @@ export default {
     }
 }
 
+// BANNER
 .banner {
     padding-top: 4.5rem;
     background-image: url('../assets/img/app-ordering-scaled.jpg');
@@ -202,4 +205,6 @@ export default {
         }
     }
 }
+
+//LATEST NEWS
 </style>
