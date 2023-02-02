@@ -105,21 +105,23 @@ export default {
 
     .container-form {
         margin: 0 6rem;
-    }
 
-    .compilation {
+        .compilation {
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: 5rem;
-    }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 5rem;
+        }
 
-    input {
-        width: 100%;
-        height: 2rem;
-        border-radius: 15px;
-        margin-bottom: 1rem;
+        input {
+            width: 100%;
+            height: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+        }
+
+
     }
 
     ul {
@@ -130,5 +132,9 @@ export default {
         display: inline;
         padding: 0 0.6rem;
     }
+
+
+
+
 }
 </style>
